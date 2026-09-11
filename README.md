@@ -2,6 +2,8 @@
 
 A Windows 11 tray app built with .NET 10 and WPF. It reads your signed-in Codex CLI account through one hidden `codex app-server` process.
 
+The executable and window icon use a fixed 88% five-hour / 88% weekly / three-reset design on a dark tile. The live tray icon continues to show actual usage. Icon sources are in `src/CodexUsageMonitor/Assets`; regenerate them with `pwsh -NoProfile -File scripts/generate-icon.ps1`. The ICO includes nine resolutions from 16 to 256 pixels, with a separate 512px PNG.
+
 ## Tray icon
 
 - **Outer arc:** weekly quota remaining, from 0 to 100%.

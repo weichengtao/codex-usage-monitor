@@ -19,6 +19,10 @@ internal sealed class DetailsWindow : Window
     public DetailsWindow(Action refresh, Settings settings, Action<Settings> save, bool showSettings = false)
     {
         Title = "Codex Usage Monitor";
+        using (var iconStream = typeof(DetailsWindow).Assembly.GetManifestResourceStream("CodexUsageMonitor.AppIcon.png")
+            ?? throw new InvalidOperationException("The app icon resource is missing."))
+            Icon = System.Windows.Media.Imaging.BitmapFrame.Create(iconStream,
+                System.Windows.Media.Imaging.BitmapCreateOptions.PreservePixelFormat, System.Windows.Media.Imaging.BitmapCacheOption.OnLoad);
         Width = 370; SizeToContent = SizeToContent.Height; ResizeMode = ResizeMode.NoResize;
         ShowInTaskbar = false; Topmost = true;
         Background = new SolidColorBrush(Color.FromRgb(20, 27, 35)); Foreground = Brushes.White;

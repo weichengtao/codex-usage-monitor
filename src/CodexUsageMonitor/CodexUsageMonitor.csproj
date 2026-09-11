@@ -5,10 +5,12 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets/AppIcon.ico</ApplicationIcon>
     <AssemblyName>CodexUsageMonitor</AssemblyName>
     <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Assets/AppIcon.png" LogicalName="CodexUsageMonitor.AppIcon.png" />
     <ProjectReference Include="../CodexUsageMonitor.Core/CodexUsageMonitor.Core.csproj" />
     <Using Remove="System.Windows.Forms" />
     <Using Remove="System.Drawing" />
